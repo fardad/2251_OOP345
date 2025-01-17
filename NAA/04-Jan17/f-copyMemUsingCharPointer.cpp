@@ -9,9 +9,9 @@ void copyMem( char* des, const char* src, size_t size ) {
 int main( ) {
    double a = 1234.56789;
    double b;
-   copyMem( reinterpret_cast<char*>(&b),
-      reinterpret_cast<const char*>(&a),
-      sizeof( double ) );
+   copyMem( reinterpret_cast<char*>(&b), 
+            reinterpret_cast<const char*>(&a), 
+            sizeof( double ) );
    cout.setf( ios::fixed );
    cout << b << endl;
    return 0;
