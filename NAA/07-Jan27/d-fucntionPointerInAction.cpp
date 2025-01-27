@@ -1,17 +1,22 @@
 #include <iostream>
 using namespace std;
+auto isAdult( int num ) -> bool {
+   return num >= 18;
+}
 
+auto validNoOfStudents( int num ) -> bool {
+   return num >= 10 && num <= 35;
+}
 
 auto getInt( auto (*isValid)(int)-> bool ) -> int;
 
 auto main( ) -> int {
    cout << "OOP345NAA - Jan 27" << endl;
    cout << "Enter Age:\n> ";
-   int num = getInt( []( int num ) { return num > 18; } );
-   auto vNoStd = []( int noOfStd ) {return noOfStd >= 10 && noOfStd <= 45; };
+   int num = getInt( isAdult );
    cout << "You entered " << num << endl;
    cout << "Enter Number of students:\n> ";
-   num = getInt( vNoStd );
+   num = getInt( validNoOfStudents );
    cout << "You entered " << num << endl;
    return 0;
 }
