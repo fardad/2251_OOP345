@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CStr.cpp" />
+    <ClCompile Include="IntArray.cpp" />
+    <ClCompile Include="prg.cpp" />
+    <ClCompile Include="Tracer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CStr.h" />
+    <ClInclude Include="IntArray.h" />
+    <ClInclude Include="Tracer.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -127,9 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="prg.cp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
