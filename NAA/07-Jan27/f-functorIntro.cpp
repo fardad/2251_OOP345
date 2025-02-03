@@ -8,6 +8,14 @@ public:
       m_numberOfCalls++;
       return num1 + num2;
    }
+   float operator() ( float num1, float num2 ) {
+      m_numberOfCalls++;
+      return num1 + num2;
+   }
+   double operator() ( double num1, doube num2 ) {
+      m_numberOfCalls++;
+      return num1 + num2;
+   }
    size_t noOfCalls( )const {
       return m_numberOfCalls;
    }
