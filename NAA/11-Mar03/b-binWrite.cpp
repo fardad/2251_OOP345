@@ -2,11 +2,13 @@
 #include <fstream>
 #include <vector>
 using namespace std;
-int main( ) {
-   ofstream file( "nums.bin" , ios::binary);
-   vector<double> d{ 10.123456, 11.2343545, 12.334453 , 13.43434 };
-   for ( auto& v : d ) {
-      file.write(reinterpret_cast<const char*>(&v), sizeof( v ) );
+int main() {
+   ofstream file("nums.bin", ios::binary);
+
+   vector<double> d{ 10.1, 11.232, 12.23 , 13.43 , 14.5, 15.6, 16.7, 17.8 };
+   for (auto& v : d) {
+//      file.write(address of a byte , how many bytes);
+      file.write(reinterpret_cast<const char*>(&v), sizeof(v));
    }
    return 0;
 }
