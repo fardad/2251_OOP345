@@ -139,15 +139,6 @@ if (fs::exists(p) && fs::is_regular_file(p)) {
 ```
 - `fs::file_size(p)`: Returns file size in bytes.
 
-### **Getting Last Write Time**
-```cpp
-auto ftime = fs::last_write_time("example.txt");
-std::time_t cftime = decltype(ftime)::clock::to_time_t(ftime);
-std::cout << "Last modified: " << std::asctime(std::localtime(&cftime));
-```
-- Fetches the last modification time of the file.
-
----
 
 ## **8. Permissions**
 ### **Checking File Permissions**
